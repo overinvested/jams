@@ -4,14 +4,20 @@ import SearchBar from "./searchbar";
 
 class ProductList extends Component {
   state = {
-    products: [
-      // filled by fillProductList()
-    ],
+    visible: true,
+    products: this.props.products,
   };
 
   render() {
-    // map product array to product component
-    return;
+    return (
+      <div>
+        {this.state.products.map((product) => (
+          <div key={product.id}>
+            <div>{product.name}</div>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   renderSearchBar() {

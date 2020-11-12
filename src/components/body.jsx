@@ -9,13 +9,13 @@ class Body extends Component {
     componentToDisplay: "",
   };
 
-  fillProductList() {
-    // fills the state of the product list component with products from the database
-  }
-
   render() {
     // handles conditional rendering of different components (prod. list, cart, wish list, checkout)
-    return <main className="container"></main>;
+    return (
+      <main className="container">
+        <ProductList products={this.props.productList} />
+      </main>
+    );
   }
 
   renderProductList() {

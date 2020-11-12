@@ -1,0 +1,256 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "category": "CPU",
+      "name": "AMD Ryzen 5 3600",
+      "coreCount": "6",
+      "coreClock": "3.6 GHz",
+      "boostClock": "4.2 GHz",
+      "thermalDesignPower": "65 W",
+      "multithreading": "Yes",
+      "price": "$220"
+    },
+    {
+      "id": "2",
+      "category": "CPU",
+      "name": "Intel Core i7-6700K",
+      "coreCount": "4",
+      "coreClock": "4 GHz",
+      "boostClock": "4.2 GHz",
+      "thermalDesignPower": "91 W",
+      "multithreading": "Yes",
+      "price": "$280"
+    },
+    {
+      "id": "3",
+      "category": "CPU",
+      "name": "AMD Ryzen 9 3950X",
+      "coreCount": "16",
+      "coreClock": "3.5 GHz",
+      "boostClock": "4.7 GHz",
+      "thermalDesignPower": "105 W",
+      "multithreading": "Yes",
+      "price": "$710"
+    },
+    {
+      "id": "4",
+      "category": "CPU Cooler",
+      "name": "AMD Ryzen 9 3950X",
+      "fanRPM": "600-2000",
+      "noiseLevel": "9-36 dB",
+      "radiatorSize": "N/A",
+      "price": "$25"
+    },
+    {
+      "id": "5",
+      "category": "CPU Cooler",
+      "name": "Corsair H100i RGB Platinum",
+      "fanRPM": "2400",
+      "noiseLevel": "37 dB",
+      "radiatorSize": "240 mm",
+      "price": "$160"
+    },
+    {
+      "id": "6",
+      "category": "CPU Cooler",
+      "name": "NZXT Kraken M22",
+      "fanRPM": "500-2000",
+      "noiseLevel": "21-36 dB",
+      "radiatorSize": "120 mm",
+      "price": "$75"
+    },
+    {
+      "id": "7",
+      "category": "Motherboard",
+      "name": "MSI B450 Tomahawk Max",
+      "socket": "AM4",
+      "formFactor": "ATX",
+      "maxMemory": "64 GB",
+      "memorySlots": "4",
+      "price": "$115"
+    },
+    {
+      "id": "8",
+      "category": "Motherboard",
+      "name": "Gigabyte B450 DS3H",
+      "socket": "AM4",
+      "formFactor": "Micro ATX",
+      "maxMemory": "64 GB",
+      "memorySlots": "4",
+      "price": "$72"
+    },
+    {
+      "id": "9",
+      "category": "Motherboard",
+      "name": "MSI Z390-A Pro",
+      "socket": "LGA1151",
+      "formFactor": "ATX",
+      "maxMemory": "128 GB",
+      "memorySlots": "4",
+      "price": "$120"
+    },
+    {
+      "id": "10",
+      "category": "RAM",
+      "name": "Corsair Vengeance LPX",
+      "capacity": "16 GB",
+      "speed": "DDR4-3200",
+      "modules": "2x8GB",
+      "firstWordLatency": "10 ns",
+      "casLatency": "16",
+      "price": "$69"
+    },
+    {
+      "id": "11",
+      "category": "RAM",
+      "name": "G.Skill Ripjaws V",
+      "capacity": "16 GB",
+      "speed": "DDR4-3600",
+      "modules": "2x8GB",
+      "firstWordLatency": "8.889 ns",
+      "casLatency": "16",
+      "price": "$75"
+    },
+    {
+      "id": "12",
+      "category": "RAM",
+      "name": "Kingston Hyper X Fury",
+      "capacity": "16 GB",
+      "speed": "DDR3-1866",
+      "modules": "2x8GB",
+      "firstWordLatency": "10.718 ns",
+      "casLatency": "10",
+      "price": "$84"
+    },
+    {
+      "id": "13",
+      "category": "Storage",
+      "name": "Seagate Barracuda Complete",
+      "capacity": "2 TB",
+      "speed": "7200RPM",
+      "cache": "256 MB",
+      "formFactor": "3.5 in",
+      "interface": "SATA 6 Gb/s",
+      "price": "$55"
+    },
+    {
+      "id": "14",
+      "category": "Storage",
+      "name": "Samsung 970 Evo",
+      "capacity": "1 TB",
+      "speed": "SSD",
+      "cache": "1024 MB",
+      "formFactor": "M.2-2280",
+      "interface": "M.2 (M)",
+      "price": "$150"
+    },
+    {
+      "id": "15",
+      "category": "Storage",
+      "name": "Western Digital Caviar Blue",
+      "capacity": "1 TB",
+      "speed": "7200RPM",
+      "cache": "64 MB",
+      "formFactor": "3.5 in",
+      "interface": "SATA 6 Gb/s",
+      "price": "$45"
+    },
+    {
+      "id": "16",
+      "category": "GPU",
+      "name": "Asus Strix Gaming",
+      "chipset": "GeForce GTX 1080 Ti",
+      "memory": "11 GB",
+      "coreClock": "1493 MHz",
+      "boostClock": "1632 MHz",
+      "length": "298 mm",
+      "price": "$1340"
+    },
+    {
+      "id": "17",
+      "category": "GPU",
+      "name": "Sapphire Pulse",
+      "chipset": "Radeon RX 5600 XT",
+      "memory": "6 GB",
+      "coreClock": "1247 MHz",
+      "boostClock": "1750 MHz",
+      "length": "254 mm",
+      "price": "$320"
+    },
+    {
+      "id": "18",
+      "category": "GPU",
+      "name": "MSI Gaming Z",
+      "chipset": "GeForce RTX 2060",
+      "memory": "6 GB",
+      "coreClock": "1365 MHz",
+      "boostClock": "1830 MHz",
+      "length": "247 mm",
+      "price": "$419"
+    },
+    {
+      "id": "19",
+      "category": "Case",
+      "name": "NZXT H510",
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "sidePanel": "Tempered Glass",
+      "fiveInchBays": "0",
+      "threeInchBays": "2",
+      "price": "$70"
+    },
+    {
+      "id": "20",
+      "category": "Case",
+      "name": "Fractal Design Meshify C",
+      "type": "ATX Mid Tower",
+      "color": "Black",
+      "sidePanel": "Tinted Tempered Glass",
+      "fiveInchBays": "0",
+      "threeInchBays": "2",
+      "price": "$89"
+    },
+    {
+      "id": "21",
+      "category": "Case",
+      "name": "Lian Li PC-O11 Dynamic",
+      "type": "ATX Full Tower",
+      "color": "White",
+      "sidePanel": "Tempered Glass",
+      "fiveInchBays": "0",
+      "threeInchBays": "2",
+      "price": "$140"
+    },
+    {
+      "id": "22",
+      "category": "PSU",
+      "name": "Corsair RM (2019)",
+      "formFactor": "ATX",
+      "efficiency": "80+ Gold",
+      "wattage": "750W",
+      "modular": "full",
+      "price": "$125"
+    },
+    {
+      "id": "23",
+      "category": "PSU",
+      "name": "EVGA BQ",
+      "formFactor": "ATX",
+      "efficiency": "80+ Bronze",
+      "wattage": "500W",
+      "modular": "semi",
+      "price": "$68"
+    },
+    {
+      "id": "24",
+      "category": "PSU",
+      "name": "Corsair RMx (2018)",
+      "formFactor": "ATX",
+      "efficiency": "80+ Gold",
+      "wattage": "850W",
+      "modular": "full",
+      "price": "$145"
+    }
+  ]
+}

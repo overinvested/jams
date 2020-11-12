@@ -1,25 +1,20 @@
 import React, { Component } from "react";
+import { Navbar } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 class NavBar extends Component {
   handleNavigation() {}
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <a className="nav-link active" href="">
-              Home <span className="sr-only">(current)</span>
-            </a>
-            <a className="nav-link" href="#">
-              New
-            </a>
-            <a className="nav-link" href="#">
-              Popular
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar bg="light" variant="light">
+        <Nav className="mr-auto">
+          <Button variant="link">Home</Button>
+          <Button variant="link">New</Button>
+          <Button variant="link">Popular</Button>
+        </Nav>
+      </Navbar>
     );
   }
 }
