@@ -8,16 +8,42 @@ class ProductList extends Component {
     products: this.props.products,
   };
 
+  /**
+   * Handles the selection of a product.
+   * Filters the product list such that only the selected product is rendered.
+   * @param {string} productId is the id of the product which has been selected.
+   */
+
+  handleSelect = (productId) => {
+    const products = this.state.products.filter((p) => p.id === productId);
+    this.setState({ products });
+  };
+
+  /**
+   * Handles the working of the back button.
+   * Sets the state such that the product list will be repopulated.
+   */
+  handleBack = () => {
+    this.setState({ products: this.props.products });
+  };
+
   render() {
-    return (
-      <div>
-        {this.state.products.map((product) => (
-          <div key={product.id}>
-            <div>{product.name}</div>
-          </div>
-        ))}
-      </div>
-    );
+    if (this.state.visible) {
+      return (
+        <div>
+          {this.state.products.map((product) => (
+            <Product
+              key={product.id}
+              productInfo={product}
+              onSelect={this.handleSelect}
+              onBack={this.handleBack}
+            ></Product>
+          ))}
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 
   renderSearchBar() {
@@ -26,10 +52,6 @@ class ProductList extends Component {
 
   handleSearch() {
     // handles filtering of the list based on a search query
-  }
-
-  renderProduct() {
-    // renders a given product
   }
 }
 
