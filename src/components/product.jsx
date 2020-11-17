@@ -31,10 +31,13 @@ class Product extends Component {
     const info = this.state.info;
     if (!this.state.singleDisplay) {
       return (
-        <div onClick={() => this.handleSelect()}>
-          {info.name} {info.coreCount} {info.coreClock} {info.boostClock}{" "}
-          {info.price}
-        </div>
+        <tr onClick={() => this.handleSelect()}>
+          <td>{info.name}</td>
+          <td>{info.coreCount}</td>
+          <td>{info.coreClock}</td>
+          <td>{info.boostClock}</td>
+          <td>{info.price}</td>
+        </tr>
       );
     } else {
       return (

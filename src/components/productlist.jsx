@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "./product";
 import SearchBar from "./searchbar";
+import { Table } from "react-bootstrap";
 
 class ProductList extends Component {
   state = {
@@ -31,14 +32,25 @@ class ProductList extends Component {
     if (this.state.visible) {
       return (
         <div>
-          {this.state.products.map((product) => (
-            <Product
-              key={product.id}
-              productInfo={product}
-              onSelect={this.handleSelect}
-              onBack={this.handleBack}
-            ></Product>
-          ))}
+          <Table>
+            <tr>
+              <th>Product</th>
+              <th>Core Count</th>
+              <th>Base Clock</th>
+              <th>Boost Clock</th>
+              <th>Price</th>
+            </tr>
+            <tbody>
+              {this.state.products.map((product) => (
+                <Product
+                  key={product.id}
+                  productInfo={product}
+                  onSelect={this.handleSelect}
+                  onBack={this.handleBack}
+                ></Product>
+              ))}
+            </tbody>
+          </Table>
         </div>
       );
     } else {
