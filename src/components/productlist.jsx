@@ -33,13 +33,15 @@ class ProductList extends Component {
       return (
         <div>
           <Table>
-            <tr>
-              <th>Product</th>
-              <th>Core Count</th>
-              <th>Base Clock</th>
-              <th>Boost Clock</th>
-              <th>Price</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Core Count</th>
+                <th>Base Clock</th>
+                <th>Boost Clock</th>
+                <th>Price</th>
+              </tr>
+            </thead>
             <tbody>
               {this.state.products.map((product) => (
                 <Product
