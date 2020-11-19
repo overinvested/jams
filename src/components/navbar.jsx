@@ -4,15 +4,26 @@ import { Nav } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 class NavBar extends Component {
-  handleNavigation() {}
+  /**
+   * @param {string} sortMethod
+   */
+  handleSort = (sortMethod) => {
+    this.props.onSort(sortMethod);
+  };
 
   render() {
     return (
       <Navbar bg="light" variant="light">
         <Nav className="mr-auto">
-          <Button variant="link">Home</Button>
-          <Button variant="link">New</Button>
-          <Button variant="link">Popular</Button>
+          <Button variant="link" onClick={() => this.handleSort("default")}>
+            Home
+          </Button>
+          <Button variant="link" onClick={() => this.handleSort("new")}>
+            New
+          </Button>
+          <Button variant="link" onClick={() => this.handleSort("popular")}>
+            Popular
+          </Button>
         </Nav>
       </Navbar>
     );

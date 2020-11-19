@@ -7,14 +7,53 @@ import Products from "./products.json";
 const products = Products;
 
 class App extends Component {
+  state = {
+    products: products.products,
+  };
+
   render() {
     return (
       <React.Fragment>
-        <NavBar />
-        <Body productList={products.products} />
+        <NavBar onSort={this.handleSort} />
+        <Body productList={this.state.products} />
       </React.Fragment>
     );
   }
+
+  handleSort = (sortMethod) => {
+    var sortedProducts = products.products;
+    if (sortMethod === "default") {
+      sortedProducts.sort(function (a, b) {
+        if (a.id < b.id) {
+          return -1;
+        } else if (a.id > b.id) {
+          return 1;
+        }
+        return 0;
+      });
+      this.setState({ products: sortedProducts });
+    } else if (sortMethod === "new") {
+      sortedProducts.sort(function (a, b) {
+        if (Date.parse(a.dateAdded) < Date.parse(b.dateAdded)) {
+          return -1;
+        } else if (Date.parse(a.dateAdded) > Date.parse(b.dateAdded)) {
+          return 1;
+        }
+        return 0;
+      });
+      this.setState({ products: sortedProducts });
+    } else if (sortMethod === "popular") {
+      sortedProducts.sort(function (a, b) {
+        if (a.purchases < b.purchases) {
+          return -1;
+        } else if (a.purchases > b.purchases) {
+          return 1;
+        }
+        return 0;
+      });
+      this.setState({ products: sortedProducts });
+    }
+  };
 
   handleNavigation(props) {
     // based on what is clicked, send props to body
