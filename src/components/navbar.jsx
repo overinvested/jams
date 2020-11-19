@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Navbar } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import logo from "../logo.svg";
 
 class NavBar extends Component {
   /**
@@ -15,6 +16,7 @@ class NavBar extends Component {
     return (
       <Navbar bg="light" variant="light">
         <Nav className="mr-auto">
+          <img src={logo} height="50px" width="150px"></img>
           <Button variant="link" onClick={() => this.handleSort("default")}>
             Home
           </Button>

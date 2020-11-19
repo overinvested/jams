@@ -11,8 +11,7 @@
       "multithreading": "Yes",
       "price": "$220",
       "dateAdded": "9/13/20",
-      "purchases": 9115,
-      "img": ""
+      "purchases": 9115
     },
     {
       "id": 2,
@@ -25,8 +24,7 @@
       "multithreading": "Yes",
       "price": "$280",
       "dateAdded": "8/17/20",
-      "purchases": 1067,
-      "img": ""
+      "purchases": 1067
     },
     {
       "id": 3,
@@ -39,8 +37,7 @@
       "multithreading": "Yes",
       "price": "$710",
       "dateAdded": "9/21/20",
-      "purchases": 5714,
-      "img": ""
+      "purchases": 5714
     },
     {
       "id": 4,
@@ -51,10 +48,9 @@
       "boostClock": "4.9 GHz",
       "thermalDesignPower": "95 W",
       "multithreading": "No",
-      "price": "296",
+      "price": "$296",
       "dateAdded": "4/17/20",
-      "purchases": 3140,
-      "img": ""
+      "purchases": 3140
     },
     {
       "id": 5,
@@ -67,8 +63,7 @@
       "multithreading": "Yes",
       "price": "$370",
       "dateAdded": "8/18/20",
-      "purchases": 1874,
-      "img": ""
+      "purchases": 1874
     },
     {
       "id": 6,
@@ -81,8 +76,7 @@
       "multithreading": "Yes",
       "price": "$384",
       "dateAdded": "6/11/20",
-      "purchases": 2038,
-      "img": ""
+      "purchases": 2038
     },
     {
       "id": 7,
@@ -95,22 +89,20 @@
       "multithreading": "Yes",
       "price": "$550",
       "dateAdded": "7/7/20",
-      "purchases": 5214,
-      "img": ""
+      "purchases": 5214
     },
     {
       "id": 8,
       "category": "CPU",
-      "name": "AMD Ryzen 9 3950X",
-      "coreCount": "16",
-      "coreClock": "3.5 GHz",
-      "boostClock": "4.7 GHz",
-      "thermalDesignPower": "105 W",
-      "multithreading": "Yes",
-      "price": "$710",
-      "dateAdded": "9/21/20",
-      "purchases": 5714,
-      "img": ""
+      "name": "Intel Core i5-9400F",
+      "coreCount": "6",
+      "coreClock": "2.9 GHz",
+      "boostClock": "4.1 GHz",
+      "thermalDesignPower": "65 W",
+      "multithreading": "No",
+      "price": "$140",
+      "dateAdded": "7/1/20",
+      "purchases": 2819
     },
     {
       "id": 9,
@@ -123,8 +115,7 @@
       "multithreading": "No",
       "price": "$495",
       "dateAdded": "1/2/20",
-      "purchases": 2013,
-      "img": ""
+      "purchases": 2013
     },
     {
       "id": 10,
@@ -137,8 +128,7 @@
       "multithreading": "Yes",
       "price": "$330",
       "dateAdded": "11/2/20",
-      "purchases": 5230,
-      "img": ""
+      "purchases": 5230
     },
     {
       "id": 11,
@@ -151,8 +141,7 @@
       "multithreading": "No",
       "price": "$122",
       "dateAdded": "2/29/20",
-      "purchases": 6965,
-      "img": ""
+      "purchases": 6965
     },
     {
       "id": 12,
@@ -165,8 +154,7 @@
       "multithreading": "No",
       "price": "$385",
       "dateAdded": "1/11/20",
-      "purchases": 786,
-      "img": ""
+      "purchases": 786
     },
     {
       "id": 13,
@@ -179,8 +167,7 @@
       "multithreading": "Yes",
       "price": "$70",
       "dateAdded": "10/29/20",
-      "purchases": 3088,
-      "img": ""
+      "purchases": 3088
     },
     {
       "id": 14,
@@ -193,8 +180,7 @@
       "multithreading": "Yes",
       "price": "$25",
       "dateAdded": "2/2/20",
-      "purchases": 3897,
-      "img": ""
+      "purchases": 3897
     },
     {
       "id": 15,
@@ -207,8 +193,7 @@
       "multithreading": "No",
       "price": "$85",
       "dateAdded": "3/13/20",
-      "purchases": 9264,
-      "img": ""
+      "purchases": 9264
     },
     {
       "id": 16,
@@ -221,8 +206,7 @@
       "multithreading": "Yes",
       "price": "$95",
       "dateAdded": "11/1/20",
-      "purchases": 1804,
-      "img": ""
+      "purchases": 1804
     },
     {
       "id": 17,
@@ -235,8 +219,7 @@
       "multithreading": "Yes",
       "price": "$98",
       "dateAdded": "9/19/20",
-      "purchases": 4819,
-      "img": ""
+      "purchases": 4819
     },
     {
       "id": 18,
@@ -249,8 +232,7 @@
       "multithreading": "No",
       "price": "$100",
       "dateAdded": "10/11/20",
-      "purchases": 7605,
-      "img": ""
+      "purchases": 7605
     },
     {
       "id": 19,
@@ -263,8 +245,7 @@
       "multithreading": "Yes",
       "price": "$190",
       "dateAdded": "1/17/20",
-      "purchases": 1516,
-      "img": ""
+      "purchases": 1516
     },
     {
       "id": 20,
@@ -277,8 +258,7 @@
       "multithreading": "Yes",
       "price": "$800",
       "dateAdded": "1/31/20",
-      "purchases": 1099,
-      "img": ""
+      "purchases": 1099
     }
   ]
 }

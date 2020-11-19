@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import imgs from "../imgs/imgs";
 
 class Product extends Component {
   state = {
@@ -44,8 +45,16 @@ class Product extends Component {
         <div className="singleDisplay">
           <Button onClick={() => this.handleBack()}>Back</Button>
           <div>
-            {info.img} {info.name} {info.coreCount} {info.coreClock}{" "}
-            {info.boostClock} {info.price}
+            <br />
+            <br />
+            <img src={imgs[info.id - 1]} alt={info.name} height="100px" />
+            <br />
+            <br />
+            <p>{info.name}</p>
+            <p>{info.coreCount}</p>
+            <p>{info.coreClock}</p>
+            <p>{info.boostClock}</p>
+            <p>{info.price}</p>
           </div>
         </div>
       );
