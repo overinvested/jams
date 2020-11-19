@@ -7,6 +7,7 @@ class ProductList extends Component {
   state = {
     visible: true,
     products: this.props.products,
+    singleDisplay: false,
   };
 
   /**
@@ -18,6 +19,7 @@ class ProductList extends Component {
   handleSelect = (productId) => {
     const products = this.state.products.filter((p) => p.id === productId);
     this.setState({ products });
+    this.setState({ singleDisplay: true });
   };
 
   /**
@@ -26,6 +28,7 @@ class ProductList extends Component {
    */
   handleBack = () => {
     this.setState({ products: this.props.products });
+    this.setState({ singleDisplay: false });
   };
 
   render() {
@@ -33,15 +36,17 @@ class ProductList extends Component {
       return (
         <div>
           <Table>
-            <thead>
-              <tr>
-                <th>Product</th>
-                <th>Core Count</th>
-                <th>Base Clock</th>
-                <th>Boost Clock</th>
-                <th>Price</th>
-              </tr>
-            </thead>
+            {!this.state.singleDisplay ? (
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Core Count</th>
+                  <th>Base Clock</th>
+                  <th>Boost Clock</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+            ) : null}
             <tbody>
               {this.state.products.map((product) => (
                 <Product
