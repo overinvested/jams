@@ -13,7 +13,10 @@ class Body extends Component {
     // handles conditional rendering of different components (prod. list, cart, wish list, checkout)
     return (
       <main className="container">
-        <ProductList products={this.props.productList} />
+        <ProductList
+          products={this.props.productList}
+          search={this.props.search}
+        />
       </main>
     );
   }

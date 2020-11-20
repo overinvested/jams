@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Product from "./product";
-import SearchBar from "./searchbar";
 import { Table } from "react-bootstrap";
 
 class ProductList extends Component {
@@ -32,6 +31,12 @@ class ProductList extends Component {
   };
 
   render() {
+    var filteredProducts = this.state.products.filter((product) => {
+      return (
+        product.name.toLowerCase().indexOf(this.props.search.toLowerCase()) !==
+        -1
+      );
+    });
     if (this.state.visible) {
       return (
         <div>
@@ -48,7 +53,7 @@ class ProductList extends Component {
               </thead>
             ) : null}
             <tbody>
-              {this.state.products.map((product) => (
+              {filteredProducts.map((product) => (
                 <Product
                   key={product.id}
                   productInfo={product}
