@@ -10,16 +10,10 @@ class App extends Component {
   state = {
     products: products.products,
     search: "",
+    cart: [],
+    wishlist: [],
+    componentToDisplay: "productList",
   };
-
-  render() {
-    return (
-      <React.Fragment>
-        <NavBar onSort={this.handleSort} onSearch={this.handleSearch} />
-        <Body productList={this.state.products} search={this.state.search} />
-      </React.Fragment>
-    );
-  }
 
   handleSearch = (search) => {
     this.setState({ search });
@@ -60,8 +54,62 @@ class App extends Component {
     }
   };
 
-  handleNavigation(props) {
+  handleNavigation = (componentToDisplay) => {
     // based on what is clicked, send props to body
+    this.setState({ componentToDisplay });
+  };
+
+  handleAddToCart = (item) => {
+    item.quantityInCart++;
+    if (!this.state.cart.includes(item)) {
+      const cart = this.state.cart.concat(item);
+      this.setState({ cart });
+    }
+  };
+
+  handleAddToWishList = (item) => {
+    const wishlist = this.state.wishlist.concat(item);
+    this.setState({ wishlist });
+  };
+
+  handleRemoveFromCart = (item) => {
+    var cart = this.state.cart;
+    if (item.quantityInCart > 0) {
+      item.quantityInCart--;
+      this.setState({ cart });
+    }
+    if (item.quantityInCart === 0) {
+      cart = this.state.cart.filter((i) => i.id !== item.id);
+      this.setState({ cart });
+    }
+  };
+
+  handleRemoveFromWishList = (item) => {
+    const wishlist = this.state.wishlist.filter((i) => i.id !== item.id);
+    this.setState({ wishlist });
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar
+          onSort={this.handleSort}
+          onSearch={this.handleSearch}
+          onNavigation={this.handleNavigation}
+        />
+        <Body
+          componentToDisplay={this.state.componentToDisplay}
+          productList={this.state.products}
+          search={this.state.search}
+          cart={this.state.cart}
+          wishlist={this.state.wishlist}
+          onAddToCart={this.handleAddToCart}
+          onAddToWishList={this.handleAddToWishList}
+          onRemoveFromCart={this.handleRemoveFromCart}
+          onRemoveFromWishList={this.handleRemoveFromWishList}
+        />
+      </React.Fragment>
+    );
   }
 }
 

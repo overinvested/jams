@@ -28,6 +28,14 @@ class Product extends Component {
     this.props.onBack();
   }
 
+  handleAddToCart(info) {
+    this.props.onAddToCart(info);
+  }
+
+  handleAddToWishList(info) {
+    this.props.onAddToWishList(info);
+  }
+
   render() {
     const info = this.state.info;
     if (!this.state.singleDisplay) {
@@ -37,7 +45,7 @@ class Product extends Component {
           <td>{info.coreCount}</td>
           <td>{info.coreClock}</td>
           <td>{info.boostClock}</td>
-          <td>{info.price}</td>
+          <td>${info.price}</td>
         </tr>
       );
     } else {
@@ -54,7 +62,13 @@ class Product extends Component {
             <p>{info.coreCount}</p>
             <p>{info.coreClock}</p>
             <p>{info.boostClock}</p>
-            <p>{info.price}</p>
+            <p>${info.price}</p>
+            <Button onClick={() => this.handleAddToWishList(info)}>
+              Add to Wishlist
+            </Button>{" "}
+            <Button onClick={() => this.handleAddToCart(info)}>
+              Add to Cart
+            </Button>
           </div>
         </div>
       );

@@ -30,6 +30,14 @@ class ProductList extends Component {
     this.setState({ singleDisplay: false });
   };
 
+  handleAddToCart = (info) => {
+    this.props.onAddToCart(info);
+  };
+
+  handleAddToWishList = (info) => {
+    this.props.onAddToWishList(info);
+  };
+
   render() {
     var filteredProducts = this.state.products.filter((product) => {
       return (
@@ -59,6 +67,8 @@ class ProductList extends Component {
                   productInfo={product}
                   onSelect={this.handleSelect}
                   onBack={this.handleBack}
+                  onAddToCart={this.handleAddToCart}
+                  onAddToWishList={this.handleAddToWishList}
                 ></Product>
               ))}
             </tbody>

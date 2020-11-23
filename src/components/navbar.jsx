@@ -16,6 +16,7 @@ class NavBar extends Component {
    */
   handleSort = (sortMethod) => {
     this.props.onSort(sortMethod);
+    this.props.onNavigation("productList");
   };
 
   updateSearch = (event) => {
@@ -39,6 +40,20 @@ class NavBar extends Component {
             Popular
           </Button>
         </Nav>
+        <Nav>
+          <Button
+            variant="link"
+            onClick={() => this.props.onNavigation("wishlist")}
+          >
+            Wishlist
+          </Button>
+          <Button
+            variant="link"
+            onClick={() => this.props.onNavigation("cart")}
+          >
+            Cart
+          </Button>
+        </Nav>{" "}
         <Form inline>
           <FormControl
             type="text"
