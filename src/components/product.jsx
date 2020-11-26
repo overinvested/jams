@@ -50,7 +50,7 @@ class Product extends Component {
       );
     } else {
       return (
-        <div className="singleDisplay">
+        <div>
           <Button onClick={() => this.handleBack()}>Back</Button>
           <div>
             <br />

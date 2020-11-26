@@ -79,14 +79,6 @@ class ProductList extends Component {
       return null;
     }
   }
-
-  renderSearchBar() {
-    // renders the search bar
-  }
-
-  handleSearch() {
-    // handles filtering of the list based on a search query
-  }
 }
 
 export default ProductList;
