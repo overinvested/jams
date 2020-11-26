@@ -107,6 +107,7 @@ class App extends Component {
           onAddToWishList={this.handleAddToWishList}
           onRemoveFromCart={this.handleRemoveFromCart}
           onRemoveFromWishList={this.handleRemoveFromWishList}
+          onNavigation={this.handleNavigation}
         />
       </React.Fragment>
     );

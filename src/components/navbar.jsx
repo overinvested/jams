@@ -62,7 +62,6 @@ class NavBar extends Component {
             placeholder="Search"
             className="mr-sm-2"
           />
-          <Button variant="outline-success">Search</Button>
         </Form>
       </Navbar>
     );

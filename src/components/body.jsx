@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ProductList from "./productlist";
 import Cart from "./cart";
 import WishList from "./wishlist";
-import Checkout from "./checkout";
+import CheckOut from "./checkout";
 
 class Body extends Component {
   state = {};
@@ -21,6 +21,10 @@ class Body extends Component {
 
   handleRemoveFromWishList = (info) => {
     this.props.onRemoveFromWishList(info);
+  };
+
+  handleNavigation = (componentToDisplay) => {
+    this.props.onNavigation(componentToDisplay);
   };
 
   render() {
@@ -58,7 +62,13 @@ class Body extends Component {
 
   renderCart(cart) {
     // renders the current
-    return <Cart cart={cart} onRemoveFromCart={this.handleRemoveFromCart} />;
+    return (
+      <Cart
+        cart={cart}
+        onRemoveFromCart={this.handleRemoveFromCart}
+        onNavigation={this.handleNavigation}
+      />
+    );
   }
 
   renderWishList(wishlist) {
@@ -72,7 +82,9 @@ class Body extends Component {
   }
 
   renderCheckOut(cart) {
-    // renders the checkout component
+    var isEmpty;
+    Object.keys(cart).length === 0 ? (isEmpty = true) : (isEmpty = false);
+    return <CheckOut cart={cart} cartEmpty={isEmpty} />;
   }
 }
 

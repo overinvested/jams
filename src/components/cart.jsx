@@ -43,7 +43,14 @@ class Cart extends Component {
             ))}
           </tbody>
         </Table>
-        <Button onClick={() => console.log("checkout")}>Checkout</Button>
+        <Button onClick={() => this.props.onNavigation("checkout")}>
+          Checkout
+        </Button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }
