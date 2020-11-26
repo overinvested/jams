@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.checkout {
+  float: left;
+  height: 550px;
+  width: 50%;
+}
+
+.order {
+  float: right;
+  height: 550px;
+  width: 50%;
+}
+
+.red {
+  color: red;
+}
