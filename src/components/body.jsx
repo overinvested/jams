@@ -5,30 +5,50 @@ import WishList from "./wishlist";
 import CheckOut from "./checkout";
 
 class Body extends Component {
-  state = {};
-
-  handleAddToCart = (info) => {
-    this.props.onAddToCart(info);
+  /**
+   * Elevates the parameter to the App component
+   * @param {Object} item an item to be added to the cart
+   */
+  handleAddToCart = (item) => {
+    this.props.onAddToCart(item);
   };
 
-  handleAddToWishList = (info) => {
-    this.props.onAddToWishList(info);
+  /**
+   * Elevates the parameter to the App component
+   * @param {Object} item an item to be added to the wishlist
+   */
+  handleAddToWishList = (item) => {
+    this.props.onAddToWishList(item);
   };
 
-  handleRemoveFromCart = (info) => {
-    this.props.onRemoveFromCart(info);
+  /**
+   * Elevates the parameter to the App component
+   * @param {Object} item an item to be removed from the cart
+   */
+  handleRemoveFromCart = (item) => {
+    this.props.onRemoveFromCart(item);
   };
 
-  handleRemoveFromWishList = (info) => {
-    this.props.onRemoveFromWishList(info);
+  /**
+   * Elevates the parameter to the App component
+   * @param {Object} item an item to be removed from the wishlist
+   */
+  handleRemoveFromWishList = (item) => {
+    this.props.onRemoveFromWishList(item);
   };
 
+  /**
+   * Elevates the parameter to the App component
+   * @param {Object} componentToDisplay the component to be displayed in the body
+   */
   handleNavigation = (componentToDisplay) => {
     this.props.onNavigation(componentToDisplay);
   };
 
+  /**
+   * Handles conditional rendering of different components (prod. list, cart, wish list, checkout)
+   */
   render() {
-    // handles conditional rendering of different components (prod. list, cart, wish list, checkout)
     return (
       <main className="container">
         {this.props.componentToDisplay === "productList"
@@ -47,9 +67,11 @@ class Body extends Component {
     );
   }
 
+  /**
+   * Renders the current list of products
+   * May be sorted based on navbar actions
+   */
   renderProductList() {
-    // renders the current list of products
-    // may be sorted based on navbar actions
     return (
       <ProductList
         products={this.props.productList}
@@ -60,8 +82,11 @@ class Body extends Component {
     );
   }
 
+  /**
+   * Renders the current cart
+   * @param {Object[]} cart the current cart
+   */
   renderCart(cart) {
-    // renders the current
     return (
       <Cart
         cart={cart}
@@ -71,8 +96,11 @@ class Body extends Component {
     );
   }
 
+  /**
+   * Renders the current wishlist
+   * @param {Object[]} wishlist the current wishlist
+   */
   renderWishList(wishlist) {
-    // renders the current wishlist
     return (
       <WishList
         wishlist={wishlist}
@@ -81,10 +109,20 @@ class Body extends Component {
     );
   }
 
+  /**
+   * Renders the checkout component based on the current cart
+   * @param {Object[]} cart the current cart
+   */
   renderCheckOut(cart) {
     var isEmpty;
     Object.keys(cart).length === 0 ? (isEmpty = true) : (isEmpty = false);
-    return <CheckOut cart={cart} cartEmpty={isEmpty} />;
+    return (
+      <CheckOut
+        cart={cart}
+        cartEmpty={isEmpty}
+        onEmptyCart={this.props.onEmptyCart}
+      />
+    );
   }
 }
 

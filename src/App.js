@@ -15,10 +15,18 @@ class App extends Component {
     componentToDisplay: "productList",
   };
 
+  /**
+   * Stores parameter search in the state for passing to body
+   * @param {string} search the string to be searched for
+   */
   handleSearch = (search) => {
     this.setState({ search });
   };
 
+  /**
+   * Handles sorting of product list based on parameter
+   * @param {string} sortMethod the method by which the product list should be sorted
+   */
   handleSort = (sortMethod) => {
     var sortedProducts = products.products;
     if (sortMethod === "default") {
@@ -54,11 +62,19 @@ class App extends Component {
     }
   };
 
+  /**
+   * Stores parameter componentToDisplay in state for passing to body
+   * @param {string} componentToDisplay the component that should be displayed in the body
+   */
   handleNavigation = (componentToDisplay) => {
-    // based on what is clicked, send props to body
     this.setState({ componentToDisplay });
   };
 
+  /**
+   * Handles addition of an item into cart
+   * If the object 'item' is already in the cart, it will not add a new record, only increment the quantity
+   * @param {Object} item an item to be added to the cart
+   */
   handleAddToCart = (item) => {
     item.quantityInCart++;
     if (!this.state.cart.includes(item)) {
@@ -67,11 +83,24 @@ class App extends Component {
     }
   };
 
+  /**
+   * Handles the addition of an item into the wishlist
+   * If the object 'item' is already in the wishlist, it will not add a new record
+   * @param {Object} item an item to be added to the wishlist
+   */
   handleAddToWishList = (item) => {
-    const wishlist = this.state.wishlist.concat(item);
-    this.setState({ wishlist });
+    if (!this.state.wishlist.includes(item)) {
+      const wishlist = this.state.wishlist.concat(item);
+      this.setState({ wishlist });
+    }
   };
 
+  /**
+   * Handles the removal of an item from the cart
+   * The record for the item will only be removed if the quantity in cart reaches 0
+   * Otherwise, the quantity will be reduced by 1
+   * @param {Object} item an item to be removed from the cart
+   */
   handleRemoveFromCart = (item) => {
     var cart = this.state.cart;
     if (item.quantityInCart > 0) {
@@ -84,11 +113,26 @@ class App extends Component {
     }
   };
 
+  /**
+   * Handles the removal of an item form the wishlist
+   * @param {Object} item an item to be removed from the wishlist
+   */
   handleRemoveFromWishList = (item) => {
     const wishlist = this.state.wishlist.filter((i) => i.id !== item.id);
     this.setState({ wishlist });
   };
 
+  /**
+   * Handles the emptying of the cart
+   */
+  handleEmptyCart = () => {
+    const cart = [];
+    this.setState({ cart });
+  };
+
+  /**
+   * Renders the app component
+   */
   render() {
     return (
       <React.Fragment>
@@ -108,6 +152,7 @@ class App extends Component {
           onRemoveFromCart={this.handleRemoveFromCart}
           onRemoveFromWishList={this.handleRemoveFromWishList}
           onNavigation={this.handleNavigation}
+          onEmptyCart={this.handleEmptyCart}
         />
       </React.Fragment>
     );
