@@ -12,6 +12,7 @@ import Order from "./order";
 
 class CheckOut extends Component {
   state = {
+    cart: {},
     submitted: false,
     cartEmpty: this.props.cartEmpty,
     name: "",
@@ -22,33 +23,61 @@ class CheckOut extends Component {
     city: "",
     state: "",
     zip: "",
+    nameError: "",
     emailError: "",
     cardError: "",
     cvvError: "",
+    addressError: "",
+    cityError: "",
+    stateError: "",
     zipError: "",
   };
 
+  /**
+   * Handles updating of the forms
+   * @param {Event} e the event of typing in a field
+   */
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = () => {
+  /**
+   * Handles submission of the form
+   */
+  handleSubmit = (cart) => {
     const isValid = this.validate();
     if (isValid) {
+      this.setState({ cart });
       this.setState({ submitted: !this.state.submitted });
+      this.props.onEmptyCart();
     }
   };
 
+  /**
+   * Handles form validation
+   */
   validate = () => {
+    var nameError = "";
     var emailError = "";
     var cardError = "";
     var cvvError = "";
+    var addressError = "";
+    var cityError = "";
+    var stateError = "";
     var zipError = "";
 
+    this.setState({ nameError });
     this.setState({ emailError });
     this.setState({ cardError });
     this.setState({ cvvError });
+    this.setState({ addressError });
+    this.setState({ cityError });
+    this.setState({ stateError });
     this.setState({ zipError });
+
+    if (this.state.name === "") {
+      nameError = "Invalid Name";
+    }
 
     if (!this.state.email.includes("@")) {
       emailError = "Invalid Email";
@@ -62,8 +91,25 @@ class CheckOut extends Component {
       cvvError = "Invalid CVV";
     }
 
+    if (this.state.address === "") {
+      addressError = "Invalid Address";
+    }
+
+    if (this.state.city === "") {
+      cityError = "Invalid City";
+    }
+
+    if (this.state.state === "") {
+      stateError = "Invalid State";
+    }
+
     if (!(this.state.zip.length === 5) || isNaN(parseInt(this.state.zip))) {
       zipError = "Invalid Zip Code";
+    }
+
+    if (nameError) {
+      this.setState({ nameError });
+      return false;
     }
 
     if (emailError) {
@@ -81,6 +127,21 @@ class CheckOut extends Component {
       return false;
     }
 
+    if (addressError) {
+      this.setState({ addressError });
+      return false;
+    }
+
+    if (cityError) {
+      this.setState({ cityError });
+      return false;
+    }
+
+    if (stateError) {
+      this.setState({ stateError });
+      return false;
+    }
+
     if (zipError) {
       this.setState({ zipError });
       return false;
@@ -89,8 +150,12 @@ class CheckOut extends Component {
     return true;
   };
 
+  /**
+   * Renders the checkout component
+   */
   render() {
-    const cart = this.props.cart;
+    var cart;
+    this.state.submitted ? (cart = this.state.cart) : (cart = this.props.cart);
     var total = 0;
     for (const key in cart) {
       if (cart.hasOwnProperty(key)) {
@@ -113,7 +178,7 @@ class CheckOut extends Component {
             ))}
           </ListGroup>
         </Card>
-        ______________________________________
+        ____________________________________________
         <h3>Total: ${total}</h3>
         <br />
         <br />
@@ -126,6 +191,9 @@ class CheckOut extends Component {
             disabled={this.state.cartEmpty || this.state.submitted}
             onChange={(e) => this.handleChange(e)}
           />
+          <p className="red">
+            <i>{this.state.nameError}</i>
+          </p>
           <br />
           <FormLabel>Email Address: </FormLabel>
           <FormControl
@@ -170,6 +238,9 @@ class CheckOut extends Component {
             disabled={this.state.cartEmpty || this.state.submitted}
             onChange={(e) => this.handleChange(e)}
           />
+          <p className="red">
+            <i>{this.state.addressError}</i>
+          </p>
           <br />
           <Form.Row>
             <Form.Group as={Col}>
@@ -179,6 +250,9 @@ class CheckOut extends Component {
                 disabled={this.state.cartEmpty || this.state.submitted}
                 onChange={(e) => this.handleChange(e)}
               />
+              <p className="red">
+                <i>{this.state.cityError}</i>
+              </p>
             </Form.Group>
             <Form.Group as={Col}>
               <FormLabel>State: </FormLabel>
@@ -188,6 +262,9 @@ class CheckOut extends Component {
                 disabled={this.state.cartEmpty || this.state.submitted}
                 onChange={(e) => this.handleChange(e)}
               />
+              <p className="red">
+                <i>{this.state.stateError}</i>
+              </p>
             </Form.Group>
           </Form.Row>
           <FormLabel>Zip: </FormLabel>
@@ -202,7 +279,7 @@ class CheckOut extends Component {
           </p>
           <br />
           <Button
-            onClick={this.handleSubmit}
+            onClick={() => this.handleSubmit(cart)}
             disabled={this.state.cartEmpty || this.state.submitted}
             onChange={(e) => this.handleChange(e)}
           >
@@ -210,7 +287,7 @@ class CheckOut extends Component {
           </Button>
         </Form>
         {this.state.submitted ? (
-          <Order items={cart} userInfo={this.state} />
+          <Order items={cart} userInfo={this.state} total={total} />
         ) : null}
       </div>
     );
