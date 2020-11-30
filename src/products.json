@@ -45,7 +45,7 @@
     {
       "id": 4,
       "category": "CPU",
-      "name": "Intel Core i7-9700k",
+      "name": "Intel Core i7-9700K",
       "coreCount": "8",
       "coreClock": "3.6 GHz",
       "boostClock": "4.9 GHz",
