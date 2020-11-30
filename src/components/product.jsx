@@ -28,12 +28,20 @@ class Product extends Component {
     this.props.onBack();
   }
 
-  handleAddToCart(info) {
-    this.props.onAddToCart(info);
+  /**
+   * Elevates the parameter to the ProductList component
+   * @param {Object} item an item to be added to the cart
+   */
+  handleAddToCart(item) {
+    this.props.onAddToCart(item);
   }
 
-  handleAddToWishList(info) {
-    this.props.onAddToWishList(info);
+  /**
+   * Elevates the parameter to the ProductList component
+   * @param {Object} item an item to be added to the wishlist
+   */
+  handleAddToWishList(item) {
+    this.props.onAddToWishList(item);
   }
 
   render() {
@@ -51,18 +59,25 @@ class Product extends Component {
     } else {
       return (
         <div>
+          <br />
           <Button onClick={() => this.handleBack()}>Back</Button>
           <div>
             <br />
             <br />
-            <img src={imgs[info.id - 1]} alt={info.name} height="100px" />
+            <img src={imgs[info.id - 1]} alt={info.name} height="300px" />
             <br />
             <br />
-            <p>{info.name}</p>
-            <p>{info.coreCount}</p>
-            <p>{info.coreClock}</p>
-            <p>{info.boostClock}</p>
-            <p>${info.price}</p>
+            <h2>Product: {info.name}</h2>
+            <br />
+            <h3>Specifications</h3>
+            <br />
+            <p>Core Count: {info.coreCount}</p>
+            <p>Base Clock: {info.coreClock}</p>
+            <p>Boost Clock: {info.boostClock}</p>
+            <p>TDP: {info.thermalDesignPower}</p>
+            <p>Multithreading: {info.multithreading}</p>
+            <br />
+            <h3>Price: ${info.price}</h3>
             <Button onClick={() => this.handleAddToWishList(info)}>
               Add to Wishlist
             </Button>{" "}
