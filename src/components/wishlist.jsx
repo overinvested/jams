@@ -3,14 +3,17 @@ import { Button } from "react-bootstrap";
 import { Table } from "react-bootstrap";
 
 class WishList extends Component {
-  state = {
-    wishlist: [],
-  };
-
-  handleRemoveFromWishList(info) {
-    this.props.onRemoveFromWishList(info);
+  /**
+   * Elevates the parameter to the Body component
+   * @param {Object} item an item to be removed from the wishlist
+   */
+  handleRemoveFromWishList(item) {
+    this.props.onRemoveFromWishList(item);
   }
 
+  /**
+   * Renders the WishList component
+   */
   render() {
     const wishlist = this.props.wishlist;
     return (

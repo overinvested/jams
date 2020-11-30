@@ -30,14 +30,25 @@ class ProductList extends Component {
     this.setState({ singleDisplay: false });
   };
 
-  handleAddToCart = (info) => {
-    this.props.onAddToCart(info);
+  /**
+   * Elevates the parameter to the Body component
+   * @param {Object} item an item to be added to the cart
+   */
+  handleAddToCart = (item) => {
+    this.props.onAddToCart(item);
   };
 
-  handleAddToWishList = (info) => {
-    this.props.onAddToWishList(info);
+  /**
+   * Elevates the parameter to the Body component
+   * @param {Object} item an item to be added to the wishlist
+   */
+  handleAddToWishList = (item) => {
+    this.props.onAddToWishList(item);
   };
 
+  /**
+   * Renders the ProductList component
+   */
   render() {
     var filteredProducts = this.state.products.filter((product) => {
       return (

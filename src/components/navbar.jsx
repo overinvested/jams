@@ -12,13 +12,18 @@ class NavBar extends Component {
   };
 
   /**
-   * @param {string} sortMethod
+   * Elevates the sorting and navigation parameters
+   * @param {string} sortMethod the method by which the product list will be sorted
    */
   handleSort = (sortMethod) => {
     this.props.onSort(sortMethod);
     this.props.onNavigation("productList");
   };
 
+  /**
+   * Updates the state to hold whatever the user has typed into the searchbar
+   * @param {Event} event the event of typing in the search bar
+   */
   updateSearch = (event) => {
     var target = event.target.value.substr(0, 20);
     this.setState({ search: target });

@@ -3,14 +3,17 @@ import { Button } from "react-bootstrap";
 import { Table } from "react-bootstrap";
 
 class Cart extends Component {
-  state = {
-    cart: [],
-  };
-
-  handleRemoveFromCart(info) {
-    this.props.onRemoveFromCart(info);
+  /**
+   * Elevates the parameter to the Body component
+   * @param {Object} item an item to be removed from the cart
+   */
+  handleRemoveFromCart(item) {
+    this.props.onRemoveFromCart(item);
   }
 
+  /**
+   * Renders the cart component
+   */
   render() {
     const cart = this.props.cart;
     return (
