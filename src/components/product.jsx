@@ -71,11 +71,30 @@ class Product extends Component {
             <br />
             <h3>Specifications</h3>
             <br />
-            <p>Core Count: {info.coreCount}</p>
-            <p>Base Clock: {info.coreClock}</p>
-            <p>Boost Clock: {info.boostClock}</p>
-            <p>TDP: {info.thermalDesignPower}</p>
-            <p>Multithreading: {info.multithreading}</p>
+            <p>
+              <b>Core Count:</b> {info.coreCount}
+            </p>
+            <p>
+              <b>Base Clock:</b> {info.coreClock}
+            </p>
+            <p>
+              <b>Boost Clock:</b> {info.boostClock}
+            </p>
+            <p>
+              <b>TDP:</b> {info.thermalDesignPower}
+            </p>
+            <p>
+              <b>Multithreading:</b> {info.multithreading}
+            </p>
+            <p>
+              <b>Socket:</b> {info.socket}
+            </p>
+            <p>
+              <b>Integrated Graphics:</b> {info.integratedGraphics}
+            </p>
+            <p>
+              <b>Maximum Supported Memory:</b> {info.maximumMemory}
+            </p>
             <br />
             <h3>Price: ${info.price}</h3>
             <Button onClick={() => this.handleAddToWishList(info)}>
