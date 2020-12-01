@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/jams/static/css/main.ae326d11.chunk.css",
-    "main.js": "/jams/static/js/main.cd46b0eb.chunk.js",
-    "main.js.map": "/jams/static/js/main.cd46b0eb.chunk.js.map",
-    "runtime-main.js": "/jams/static/js/runtime-main.206bfcce.js",
-    "runtime-main.js.map": "/jams/static/js/runtime-main.206bfcce.js.map",
-    "static/css/2.43b2b750.chunk.css": "/jams/static/css/2.43b2b750.chunk.css",
-    "static/js/2.9c8c840d.chunk.js": "/jams/static/js/2.9c8c840d.chunk.js",
-    "static/js/2.9c8c840d.chunk.js.map": "/jams/static/js/2.9c8c840d.chunk.js.map",
-    "static/js/3.e3f55daa.chunk.js": "/jams/static/js/3.e3f55daa.chunk.js",
-    "static/js/3.e3f55daa.chunk.js.map": "/jams/static/js/3.e3f55daa.chunk.js.map",
+    "main.css": "/jams/static/css/main.c7d053b8.chunk.css",
+    "main.js": "/jams/static/js/main.8c964721.chunk.js",
+    "main.js.map": "/jams/static/js/main.8c964721.chunk.js.map",
+    "runtime-main.js": "/jams/static/js/runtime-main.5e38399a.js",
+    "runtime-main.js.map": "/jams/static/js/runtime-main.5e38399a.js.map",
+    "static/css/2.95f25948.chunk.css": "/jams/static/css/2.95f25948.chunk.css",
+    "static/js/2.20aac288.chunk.js": "/jams/static/js/2.20aac288.chunk.js",
+    "static/js/2.20aac288.chunk.js.map": "/jams/static/js/2.20aac288.chunk.js.map",
+    "static/js/3.ef4e108c.chunk.js": "/jams/static/js/3.ef4e108c.chunk.js",
+    "static/js/3.ef4e108c.chunk.js.map": "/jams/static/js/3.ef4e108c.chunk.js.map",
     "index.html": "/jams/index.html",
-    "static/css/2.43b2b750.chunk.css.map": "/jams/static/css/2.43b2b750.chunk.css.map",
-    "static/css/main.ae326d11.chunk.css.map": "/jams/static/css/main.ae326d11.chunk.css.map",
-    "static/js/2.9c8c840d.chunk.js.LICENSE.txt": "/jams/static/js/2.9c8c840d.chunk.js.LICENSE.txt",
+    "static/css/2.95f25948.chunk.css.map": "/jams/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.c7d053b8.chunk.css.map": "/jams/static/css/main.c7d053b8.chunk.css.map",
+    "static/js/2.20aac288.chunk.js.LICENSE.txt": "/jams/static/js/2.20aac288.chunk.js.LICENSE.txt",
     "static/media/athlon_200ge.45dff13c.jpg": "/jams/static/media/athlon_200ge.45dff13c.jpg",
     "static/media/fx_4350.686d8d09.jpg": "/jams/static/media/fx_4350.686d8d09.jpg",
     "static/media/fx_8350.f69046b1.jpg": "/jams/static/media/fx_8350.f69046b1.jpg",
@@ -37,10 +37,10 @@
     "static/media/xeon_e52640.dffe70e9.jpg": "/jams/static/media/xeon_e52640.dffe70e9.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.206bfcce.js",
-    "static/css/2.43b2b750.chunk.css",
-    "static/js/2.9c8c840d.chunk.js",
-    "static/css/main.ae326d11.chunk.css",
-    "static/js/main.cd46b0eb.chunk.js"
+    "static/js/runtime-main.5e38399a.js",
+    "static/css/2.95f25948.chunk.css",
+    "static/js/2.20aac288.chunk.js",
+    "static/css/main.c7d053b8.chunk.css",
+    "static/js/main.8c964721.chunk.js"
   ]
 }
