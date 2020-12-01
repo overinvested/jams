@@ -278,7 +278,7 @@
       "name": "AMD Athlon 200GE",
       "coreCount": "2",
       "coreClock": "3.2 GHz",
-      "boostClock": "N/A GHz",
+      "boostClock": "N/A",
       "thermalDesignPower": "35 W",
       "multithreading": "Yes",
       "socket": "AM4",
